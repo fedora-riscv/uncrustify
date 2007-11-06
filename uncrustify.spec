@@ -1,6 +1,6 @@
 Name:		uncrustify
-Version:	0.35
-Release: 2%{?dist}
+Version:	0.40
+Release: 1%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Nov  6 2007 Neal Becker <ndbecker2@gmail.com> - 0.40-1
+- Update to 0.40
+
 * Wed Aug 29 2007 Fedora Release Engineering <rel-eng at fedoraproject dot org> - 0.35-2
 - Rebuild for selinux ppc32 issue.
 
