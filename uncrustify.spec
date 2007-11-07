@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.40
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -42,6 +42,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Nov  6 2007 Neal Becker <ndbecker2@gmail.com> - 0.40-2
+- Increase release tag to satisfy cvs
+- Bump tag
+
 * Tue Nov  6 2007 Neal Becker <ndbecker2@gmail.com> - 0.40-1
 - Update to 0.40
 
