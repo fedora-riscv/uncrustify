@@ -1,5 +1,5 @@
 Name:		uncrustify
-Version:	0.35
+Version:	0.41
 Release: 1%{?dist}
 Summary:	Reformat Source
 
@@ -42,6 +42,19 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sun Nov 18 2007 Neal Becker <ndbecker2@gmail.com> - 0.41-1
+- Update to 0.41
+
+* Tue Nov  6 2007 Neal Becker <ndbecker2@gmail.com> - 0.40-2
+- Increase release tag to satisfy cvs
+- Bump tag
+
+* Tue Nov  6 2007 Neal Becker <ndbecker2@gmail.com> - 0.40-1
+- Update to 0.40
+
+* Wed Aug 29 2007 Fedora Release Engineering <rel-eng at fedoraproject dot org> - 0.35-2
+- Rebuild for selinux ppc32 issue.
+
 * Fri Jul 20 2007 Neal Becker <ndbecker2@gmail.com> - 0.35-1
 - 0.35
 
