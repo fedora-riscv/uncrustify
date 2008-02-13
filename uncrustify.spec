@@ -1,12 +1,12 @@
 Name:		uncrustify
-Version:	0.43
-Release: 2%{?dist}
+Version:	0.44
+Release: 	1%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
 License:	GPLv2
 URL:		http://uncrustify.sourceforge.net/
-Source0:	http://umn.dl.sourceforge.net/sourceforge/uncrustify/uncrustify-%{version}.tgz
+Source0:	http://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tgz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:	gcc autoconf gcc-c++ libstdc++
@@ -41,6 +41,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Feb 13 2008 Neal Becker <ndbecker2@gmail.com> - 0.44-1
+- Update to 0.44
+
 * Tue Jan 29 2008 Neal Becker <ndbecker2@gmail.com> - 0.43-2
 - Remove explicit dep libstdc++
 
