@@ -26,7 +26,8 @@ make %{?_smp_mflags}
 %install
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
-
+mkdir -p $RPM_BUILD_ROOT/%{_mandir}/man1
+install -m644 documentation/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -37,7 +38,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc COPYING AUTHORS README NEWS BUGS
 %{_bindir}/uncrustify
 %{_datadir}/uncrustify
-
+%{_mandir}/man1/uncrustify.1*
 
 
 %changelog
