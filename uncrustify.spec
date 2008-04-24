@@ -1,5 +1,5 @@
 Name:		uncrustify
-Version:	0.45
+Version:	0.46
 Release: 	1%{?dist}
 Summary:	Reformat Source
 
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Thu Apr 24 2008 Neal Becker <ndbecker2@gmail.com> - 0.46-1
+- Update to 0.46
+
 * Sun Mar  9 2008 Neal Becker <ndbecker2@gmail.com> - 0.45-1
 - Update to 0.45
 
