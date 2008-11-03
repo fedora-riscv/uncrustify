@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.50
-Release: 	1%{?dist}
+Release: 	2%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -27,7 +27,7 @@ make %{?_smp_mflags}
 rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{_mandir}/man1
-install -m644 documentation/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
+install -m644 man/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -36,12 +36,16 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(-,root,root,-)
 %doc COPYING AUTHORS README NEWS BUGS
+%doc documentation
 %{_bindir}/uncrustify
 %{_datadir}/uncrustify
 %{_mandir}/man1/uncrustify.1*
 
 
 %changelog
+* Mon Nov  3 2008 Neal Becker <ndbecker2@gmail.com> - 0.50-2
+- Documentation fixes
+
 * Mon Nov  3 2008 Neal Becker <ndbecker2@gmail.com> - 0.50-1
 - Update to 0.50
 
