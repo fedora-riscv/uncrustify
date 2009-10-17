@@ -1,6 +1,6 @@
 Name:		uncrustify
-Version:	0.52
-Release: 	2%{?dist}
+Version:	0.54
+Release: 	1%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Oct 17 2009 Neal Becker <ndbecker2@gmail.com> - 0.54-1
+- Update to 0.54
+
 * Sun Jul 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.52-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_12_Mass_Rebuild
 
