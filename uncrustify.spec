@@ -1,12 +1,12 @@
 Name:		uncrustify
-Version:	0.54
+Version:	0.56
 Release: 	1%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
 License:	GPLv2
 URL:		http://uncrustify.sourceforge.net/
-Source0:	http://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tgz
+Source0:	http://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:	gcc autoconf gcc-c++ libstdc++
@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon May 24 2010 Neal Becker <ndbecker2@gmail.com> - 0.56-1
+- Update to 0.56
+
 * Sat Oct 17 2009 Neal Becker <ndbecker2@gmail.com> - 0.54-1
 - Update to 0.54
 
