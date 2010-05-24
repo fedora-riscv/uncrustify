@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.56
-Release: 	1%{?dist}
+Release: 	2%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -35,7 +35,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc COPYING AUTHORS README NEWS BUGS
+%doc COPYING AUTHORS README NEWS
 %doc documentation
 %{_bindir}/uncrustify
 %{_datadir}/uncrustify
@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon May 24 2010 Neal Becker <ndbecker2@gmail.com> - 0.56-2
+- Remove 'BUGS'
+
 * Mon May 24 2010 Neal Becker <ndbecker2@gmail.com> - 0.56-1
 - Update to 0.56
 
