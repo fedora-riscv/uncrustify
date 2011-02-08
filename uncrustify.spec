@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.56
-Release: 	2%{?dist}
+Release: 	3%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -43,6 +43,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Feb 07 2011 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.56-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_15_Mass_Rebuild
+
 * Mon May 24 2010 Neal Becker <ndbecker2@gmail.com> - 0.56-2
 - Remove 'BUGS'
 
