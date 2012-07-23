@@ -1,36 +1,33 @@
 Name:		uncrustify
 Version:	0.58
-Release: 	3%{?dist}
+Release: 	4%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
 License:	GPLv2
 URL:		http://uncrustify.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+# Misc. bug-fixes.
+Patch0:         uncrustify-0.58.patch
 
-BuildRequires:	gcc autoconf gcc-c++ libstdc++
+BuildRequires:	gcc gcc-c++ libstdc++
 
 %description
 Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 
 %prep
 %setup -q
-
+%patch0 -p1
 
 %build
-%configure
+%configure --disable-silent-rules
 make %{?_smp_mflags}
 
 
 %install
-rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 mkdir -p $RPM_BUILD_ROOT/%{_mandir}/man1
 install -m644 man/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 
 %files
@@ -43,6 +40,12 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Mon Jul 23 2012 Ralf Corsépius <corsepiu@fedoraproject.org> - 0.58-4
+- Append --disable-silent-rules to %%configure (Make building verbose).
+- Add uncrustify-0.58.patch (Add missing include).
+- Remove BR: autoconf.
+- Modernize spec.
+
 * Sun Jul 22 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.58-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
 
