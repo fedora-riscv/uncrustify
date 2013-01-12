@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.60
-Release: 	1%{?dist}
+Release: 	2%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -8,7 +8,6 @@ License:	GPLv2
 URL:		http://uncrustify.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tar.gz
 # Misc. bug-fixes.
-Patch0:         uncrustify-0.58.patch
 
 BuildRequires:	gcc gcc-c++ libstdc++
 
@@ -17,7 +16,6 @@ Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure --disable-silent-rules
@@ -40,6 +38,10 @@ install -m644 man/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 
 %changelog
+* Sat Jan 12 2013 Neal Becker <ndbecker2@gmail.com> - 0.60-2
+- Update to 0.60
+- Remove patch
+
 * Mon Jul 23 2012 Ralf Corsépius <corsepiu@fedoraproject.org> - 0.58-4
 - Append --disable-silent-rules to %%configure (Make building verbose).
 - Add uncrustify-0.58.patch (Add missing include).
