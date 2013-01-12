@@ -1,6 +1,6 @@
 Name:		uncrustify
-Version:	0.58
-Release: 	4%{?dist}
+Version:	0.60
+Release: 	1%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
