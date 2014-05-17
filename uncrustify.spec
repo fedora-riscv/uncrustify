@@ -1,14 +1,12 @@
 Name:		uncrustify
 Version:	0.60
-Release: 	4%{?dist}
+Release:	5%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
 License:	GPLv2
 URL:		http://uncrustify.sourceforge.net/
 Source0:	http://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tar.gz
-# Misc. bug-fixes.
-
 BuildRequires:	gcc gcc-c++ libstdc++
 
 %description
@@ -29,7 +27,6 @@ install -m644 man/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 
 %files
-%defattr(-,root,root,-)
 %doc COPYING AUTHORS README NEWS
 %doc documentation
 %{_bindir}/uncrustify
@@ -38,6 +35,9 @@ install -m644 man/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 
 %changelog
+* Sat May 17 2014 Filipe Rosset <rosset.filipe@gmail.com> - 0.60-5
+- Rebuilt to fix rhbz #926678 + spec cleanup
+
 * Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.60-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 
