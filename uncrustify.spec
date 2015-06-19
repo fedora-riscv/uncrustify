@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.60
-Release:	8%{?dist}
+Release:	9%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -35,6 +35,9 @@ install -m644 man/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 
 %changelog
+* Fri Jun 19 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.60-9
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
 * Sat May 02 2015 Kalev Lember <kalevlember@gmail.com> - 0.60-8
 - Rebuilt for GCC 5 C++11 ABI change
 
