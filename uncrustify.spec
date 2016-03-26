@@ -27,7 +27,8 @@ install -m644 man/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 
 %files
-%doc COPYING AUTHORS README NEWS
+# FIXME: https://github.com/uncrustify/uncrustify/issues/383
+%doc COPYING AUTHORS NEWS
 %doc documentation
 %{_bindir}/uncrustify
 %{_datadir}/uncrustify
