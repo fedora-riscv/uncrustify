@@ -1,5 +1,5 @@
 Name:		uncrustify
-Version:	0.62
+Version:	0.64
 Release:	1%{?dist}
 Summary:	Reformat Source
 
@@ -7,35 +7,36 @@ Group:		Development/Tools
 License:	GPLv2
 URL:		http://uncrustify.sourceforge.net/
 Source0:	https://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tar.gz
-BuildRequires:	gcc gcc-c++ libstdc++
+BuildRequires:	gcc gcc-c++ libstdc++ cmake
 
 %description
 Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 
 %prep
-%setup -q
+%autosetup -c
 
 %build
-%configure --disable-silent-rules
+mkdir build && cd build
+%cmake ..
 make %{?_smp_mflags}
 
 
 %install
+cd build
 make install DESTDIR=$RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/%{_mandir}/man1
-install -m644 man/uncrustify.1 $RPM_BUILD_ROOT/%{_mandir}/man1
 
 
 %files
-# FIXME: https://github.com/uncrustify/uncrustify/issues/468
-%doc COPYING AUTHORS NEWS
+%doc COPYING AUTHORS NEWS README.md
 %doc documentation
 %{_bindir}/uncrustify
-%{_datadir}/uncrustify
 %{_mandir}/man1/uncrustify.1*
 
 
 %changelog
+* Sat Oct 15 2016 Michael Catanzaro <mcatanzaro@gnome.org> - 0.64-1
+- Update to 0.64
+
 * Sat Mar 26 2016 Michael Catanzaro <mcatanzaro@gnome.org> - 0.62-1
 - Update to 0.62
 
