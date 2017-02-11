@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.64
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Reformat Source
 
 Group:		Development/Tools
@@ -34,6 +34,9 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.64-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Sat Oct 15 2016 Michael Catanzaro <mcatanzaro@gnome.org> - 0.64-1
 - Update to 0.64
 
