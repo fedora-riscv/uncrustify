@@ -3,7 +3,6 @@ Version:	0.68.1
 Release:	1%{?dist}
 Summary:	Reformat Source
 
-Group:		Development/Tools
 License:	GPLv2
 URL:		http://uncrustify.sourceforge.net/
 Source0:	https://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tar.gz
