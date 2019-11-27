@@ -15,20 +15,27 @@ Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 %autosetup -c
 
 %build
+cd uncrustify-uncrustify-%{version} # https://github.com/uncrustify/uncrustify/issues/2558
 mkdir build && cd build
 %cmake ..
 make %{?_smp_mflags}
 
 
 %install
+cd uncrustify-uncrustify-%{version} # https://github.com/uncrustify/uncrustify/issues/2558
 cd build
 make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %files
-%doc COPYING AUTHORS NEWS README.md
-%doc documentation
+%doc uncrustify-uncrustify-%{version}/COPYING
+%doc uncrustify-uncrustify-%{version}/AUTHORS
+%doc uncrustify-uncrustify-%{version}/NEWS
+%doc uncrustify-uncrustify-%{version}/README.md
+%doc uncrustify-uncrustify-%{version}/documentation
 %{_bindir}/uncrustify
+%dir %{_datadir}/uncrustify
+%{_datadir}/uncrustify/*
 %{_mandir}/man1/uncrustify.1*
 
 
