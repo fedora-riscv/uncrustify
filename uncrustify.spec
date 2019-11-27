@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.70.1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Reformat Source
 
 License:	GPLv2
@@ -40,6 +40,9 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Nov 27 2019 Michael Catanzaro <mcatanzaro@gnome.org> - 0.70.1-2
+- Fix build
+
 * Wed Nov 27 2019 Michael Catanzaro <mcatanzaro@gnome.org> - 0.70.1-1
 - Update to 0.70.1
 
