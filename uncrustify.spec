@@ -1,6 +1,6 @@
 Name:		uncrustify
 Version:	0.70.1
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Reformat Source
 
 License:	GPLv2
@@ -40,6 +40,9 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Jan 31 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.70.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Wed Nov 27 2019 Michael Catanzaro <mcatanzaro@gnome.org> - 0.70.1-2
 - Fix build
 
