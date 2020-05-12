@@ -1,6 +1,6 @@
 Name:		uncrustify
-Version:	0.70.1
-Release:	3%{?dist}
+Version:	0.71.0
+Release:	1%{?dist}
 Summary:	Reformat Source
 
 License:	GPLv2
@@ -15,31 +15,32 @@ Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 %autosetup -c
 
 %build
-cd uncrustify-uncrustify-%{version} # https://github.com/uncrustify/uncrustify/issues/2558
 mkdir build && cd build
 %cmake ..
 make %{?_smp_mflags}
 
 
 %install
-cd uncrustify-uncrustify-%{version} # https://github.com/uncrustify/uncrustify/issues/2558
 cd build
 make install DESTDIR=$RPM_BUILD_ROOT
 
 
 %files
-%doc uncrustify-uncrustify-%{version}/COPYING
-%doc uncrustify-uncrustify-%{version}/AUTHORS
-%doc uncrustify-uncrustify-%{version}/NEWS
-%doc uncrustify-uncrustify-%{version}/README.md
-%doc uncrustify-uncrustify-%{version}/documentation
+%doc COPYING
+%doc AUTHORS
+%doc NEWS
+%doc README.md
+%doc documentation
 %{_bindir}/uncrustify
-%dir %{_datadir}/uncrustify
-%{_datadir}/uncrustify/*
+%dir %{_datadir}/doc/uncrustify
+%{_datadir}/doc/uncrustify/*
 %{_mandir}/man1/uncrustify.1*
 
 
 %changelog
+* Tue May 12 2020 Michael Catanzaro <mcatanzaro@gnome.org> - 0.71.0-1
+- Update to 0.71.0
+
 * Fri Jan 31 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0.70.1-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
