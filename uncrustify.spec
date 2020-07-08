@@ -1,3 +1,5 @@
+%undefine __cmake_in_source_build
+
 Name:		uncrustify
 Version:	0.71.0
 Release:	1%{?dist}
@@ -15,18 +17,16 @@ Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 %autosetup -c
 
 %build
-mkdir build && cd build
-%cmake ..
-make %{?_smp_mflags}
+%cmake
+%cmake_build
 
 
 %install
-cd build
-make install DESTDIR=$RPM_BUILD_ROOT
+%cmake_install
 
 
 %files
-%doc COPYING
+%license COPYING
 %doc AUTHORS
 %doc NEWS
 %doc README.md
