@@ -2,13 +2,14 @@
 
 Name:		uncrustify
 Version:	0.72.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Reformat Source
 
 License:	GPLv2
 URL:		http://uncrustify.sourceforge.net/
 Source0:	https://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tar.gz
 BuildRequires:	gcc gcc-c++ libstdc++ cmake
+BuildRequires:	python%{python3_pkgversion}
 
 %description
 Source Code Beautifier for C, C++, C#, D, Java, and Pawn
@@ -38,6 +39,9 @@ Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 
 
 %changelog
+* Sat Dec 19 2020 Timotheus Pokorra <timotheus.pokorra@solidcharity.com> - 0.72.0-2
+- BuildRequires python3
+
 * Fri Nov 06 2020 Michael Catanzaro <mcatanzaro@redhat.com> - 0.72.0-1
 - Update to 0.72.0
 
