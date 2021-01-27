@@ -2,7 +2,7 @@
 
 Name:		uncrustify
 Version:	0.72.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Reformat Source
 
 License:	GPLv2
@@ -38,6 +38,9 @@ Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 
 
 %changelog
+* Wed Jan 27 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.72.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
 * Fri Nov 06 2020 Michael Catanzaro <mcatanzaro@redhat.com> - 0.72.0-1
 - Update to 0.72.0
 
