@@ -1,18 +1,19 @@
 Name:		uncrustify
-Version:	0.74.0
+Version:	0.75.0
 Release:	%autorelease
 Summary:	Reformat Source
 
 License:	GPLv2
-URL:		http://uncrustify.sourceforge.net/
+URL:		https://uncrustify.sourceforge.net/
 Source0:	https://prdownloads.sourceforge.net/uncrustify/uncrustify-%{version}.tar.gz
-BuildRequires:	gcc gcc-c++ libstdc++ cmake
+BuildRequires:  gcc-c++
+BuildRequires:  cmake
 
 %description
 Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 
 %prep
-%autosetup -c
+%autosetup
 
 %build
 %cmake
@@ -25,12 +26,9 @@ Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 
 %files
 %license COPYING
-%doc AUTHORS
 %doc NEWS
-%doc README.md
 %doc documentation
 %{_bindir}/uncrustify
-%dir %{_datadir}/doc/uncrustify
 %{_datadir}/doc/uncrustify/*
 %{_mandir}/man1/uncrustify.1*
 
