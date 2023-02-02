@@ -1,5 +1,5 @@
 Name:		uncrustify
-Version:	0.75.1
+Version:	0.75.1.0
 Release:	%autorelease
 Summary:	Reformat Source
 
@@ -33,4 +33,5 @@ Source Code Beautifier for C, C++, C#, D, Java, and Pawn
 %{_mandir}/man1/uncrustify.1*
 
 
+%changelog
 %autochangelog
